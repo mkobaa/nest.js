@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  postgresql:
+    container_name: postgresql
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=robotic
+      - POSTGRES_PASSWORD=robotic
+      - POSTGRES_DB=robotic
+    volumes:
+      - ./data:/var/lib/postgresql/data
